@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- BACKGROUND -->
+    <div class="bg">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="stars"></div>
+    </div>
+
+    <!-- FLOATING HEARTS -->
+    <div id="floatingHearts"></div>
+
+    <!-- ================= START ================= -->
+
+    <section class="scene active" id="startScene">
+
+        <div class="start-card">
+
+            <div class="sparkle">✦</div>
+
+            <div class="cat-wrap start-cat">
+                <div class="cat-ear left"></div>
+                <div class="cat-ear right"></div>
+                <div class="cat-face">
+                    <div class="cat-eye left-eye"></div>
+                    <div class="cat-eye right-eye"></div>
+                    <div class="cat-nose">♥</div>
+                    <div class="cat-mouth">⌣</div>
+                    <div class="cat-blush left-blush"></div>
+                    <div class="cat-blush right-blush"></div>
+                </div>
+                <div class="cat-body"></div>
+                <div class="cat-tail"></div>
+            </div>
+
+            <p class="tiny">A tiny surprise has arrived...</p>
+
+            <h1>
+                Hey<br>
+                <span>cutie ❤️</span>
+            </h1>
+
+            <p class="start-text">
+                Someone made something special<br>
+                just for you.
+            </p>
+
+            <button class="main-btn" id="startBtn">
+                Let's Begin
+                <span>♡</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CAT INTRO ================= -->
+
+    <section class="scene" id="catScene">
+
+        <div class="scene-content">
+
+            <div class="cat-stage">
+
+                <div class="speech" id="catSpeech">
+                    Hey... wait! 🐱
+                </div>
+
+                <div class="cat cat-walking">
+                    <div class="cat-ear left"></div>
+                    <div class="cat-ear right"></div>
+
+                    <div class="cat-face">
+                        <div class="cat-eye left-eye"></div>
+                        <div class="cat-eye right-eye"></div>
+                        <div class="cat-nose">♥</div>
+                        <div class="cat-mouth">⌣</div>
+                        <div class="cat-blush left-blush"></div>
+                        <div class="cat-blush right-blush"></div>
+                    </div>
+
+                    <div class="cat-body"></div>
+                    <div class="cat-leg leg1"></div>
+                    <div class="cat-leg leg2"></div>
+                    <div class="cat-tail"></div>
+                </div>
+
+            </div>
+
+            <div class="dialogue">
+                <span class="label">YOUR LITTLE GUIDE</span>
+
+                <h2 id="catTitle">
+                    I have a tiny mission for you.
+                </h2>
+
+                <p id="catText">
+                    But first, you have to prove that
+                    you're ready for it. 😼
+                </p>
+            </div>
+
+            <button class="main-btn" id="catNext">
+                I'm ready
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PUZZLE ================= -->
+
+    <section class="scene" id="puzzleScene">
+
+        <div class="scene-content">
+
+            <span class="label">MISSION 01</span>
+
+            <h2>
+                Unlock the
+                <span>heart 🔐</span>
+            </h2>
+
+            <p class="instruction">
+                Put the heart pieces together.
+            </p>
+
+            <div class="puzzle">
+
+                <button class="piece piece1" data-piece="1">
+                    ♥
+                </button>
+
+                <button class="piece piece2" data-piece="2">
+                    ♡
+                </button>
+
+                <button class="piece piece3" data-piece="3">
+                    ♥
+                </button>
+
+                <button class="piece piece4" data-piece="4">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="puzzle-status" id="puzzleStatus">
+                Find the right order...
+            </div>
+
+            <div class="puzzle-heart" id="puzzleHeart">
+                ♥
+            </div>
+
+            <button class="main-btn hidden" id="puzzleNext">
+                Continue
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOVE QUESTION ================= -->
+
+    <section class="scene" id="loveScene">
+
+        <div class="scene-content question-content">
+
+            <div class="question-heart">
+                ♥
+            </div>
+
+            <span class="label">
+                IMPORTANT QUESTION
+            </span>
+
+            <h2>
+                Do you
+                <span>love me?</span>
+            </h2>
+
+            <p id="questionMessage">
+                Choose carefully... 👀
+            </p>
+
+            <div class="love-buttons" id="loveButtons">
+
+                <button class="yes-btn" id="yesBtn">
+                    YES ❤️
+                </button>
+
+                <button class="no-btn" id="noBtn">
+                    NO 😐
+                </button>
+
+            </div>
+
+            <div class="no-message" id="noMessage"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= YES ================= -->
+
+    <section class="scene" id="yesScene">
+
+        <div class="scene-content">
+
+            <div class="celebration-heart">
+                ❤️
+            </div>
+
+            <div class="confetti-container" id="yesConfetti"></div>
+
+            <span class="label">
+                I KNEW IT
+            </span>
+
+            <h2>
+                See?
+                <span>That wasn't hard. 🥰</span>
+            </h2>
+
+            <p class="big-text">
+                I knew your heart would<br>
+                choose correctly.
+            </p>
+
+            <div class="happy-cat">
+                🐱
+                <span>♥</span>
+            </div>
+
+            <button class="main-btn" id="giftBtn">
+                I have one more thing
+                <span>🎁</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFT ================= -->
+
+    <section class="scene" id="giftScene">
+
+        <div class="scene-content">
+
+            <span class="label">MISSION 02</span>
+
+            <h2>
+                Pick your
+                <span>surprise 🎁</span>
+            </h2>
+
+            <p class="instruction">
+                One of these is hiding something special.
+            </p>
+
+            <div class="gift-row">
+
+                <button class="gift" data-gift="0">
+                    <span class="gift-lid"></span>
+                    <span class="gift-box"></span>
+                    <span class="gift-ribbon"></span>
+                    <small>?</small>
+                </button>
+
+                <button class="gift" data-gift="1">
+                    <span class="gift-lid"></span>
+                    <span class="gift-box"></span>
+                    <span class="gift-ribbon"></span>
+                    <small>?</small>
+                </button>
+
+                <button class="gift" data-gift="2">
+                    <span class="gift-lid"></span>
+                    <span class="gift-box"></span>
+                    <span class="gift-ribbon"></span>
+                    <small>?</small>
+                </button>
+
+            </div>
+
+            <p class="gift-result" id="giftResult"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BIRTHDAY ================= -->
+
+    <section class="scene" id="birthdayScene">
+
+        <div class="scene-content birthday-content">
+
+            <div class="fireworks" id="fireworks"></div>
+
+            <span class="label">
+                THE REAL SURPRISE
+            </span>
+
+            <h2>
+                Happy Birthday
+                <span>My Love ❤️</span>
+            </h2>
+
+            <div class="cake">
+
+                <div class="candle candle1">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle2">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle3">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+                <div class="cake-bottom"></div>
+
+            </div>
+
+            <button class="main-btn" id="blowBtn">
+                Blow the candles 🕯️
+            </button>
+
+            <p class="birthday-message" id="birthdayMessage">
+                Make a wish... ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FINAL ================= -->
+
+    <section class="scene" id="finalScene">
+
+        <div class="scene-content final-content">
+
+            <div class="final-cat">
+                🐱
+                <div class="cat-heart">♥</div>
+            </div>
+
+            <span class="label">
+                ONE LAST MESSAGE
+            </span>
+
+            <h2>
+                You are
+                <span>my favorite person.</span>
+            </h2>
+
+            <div class="final-letter">
+
+                <p>
+                    I don't know what the future will look like,
+                    but I know one thing...
+                </p>
+
+                <p>
+                    I want to see you smile a lot,
+                    annoy you a little,
+                    make memories with you,
+                    and keep giving you reasons to smile.
+                </p>
+
+                <p class="special">
+                    Because somehow,
+                    life feels a little better
+                    with you in it. ❤️
+                </p>
+
+                <div class="signature">
+                    With love,
+                    <strong>Always ♥</strong>
+                </div>
+
+            </div>
+
+            <button class="replay-btn" id="replayBtn">
+                ↻ Replay from beginning
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
